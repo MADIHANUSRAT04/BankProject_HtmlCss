@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #003366;
+    color: white;
+}
+
+.nav-center a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-center a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* BANNER */
+.banner {
+    height: 300px;
+    background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+.banner h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+/* MAIN CONTENT LAYOUT */
+.main-content {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+
+/* FILTER SIDEBAR */
+.filters {
+    width: 25%;
+    background: #f2f5f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.filter-box {
+    margin-bottom: 25px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.filter-box h3 {
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.filter-box ul {
+    list-style: none;
+}
+
+.filter-box ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #333;
+}
+
+.filter-box ul li:hover {
+    text-decoration: underline;
+}
+
+.filter-box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #003366;
+}
+
+/* ACCOUNTS GRID */
+.account-grid {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ACCOUNT CARD */
+.account-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    position: relative;
+    transition: 0.3s;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+/* STATUS BADGE */
+.status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.active {
+    background: #c8f7c5;
+    color: #2d7a2d;
+}
+
+.status.inactive {
+    background: #f8d7da;
+    color: #a94442;
+}
+
+.details-btn {
+    display: none;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.account-card:hover .details-btn {
+    display: inline-block;
+}
+
+.partners {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.partners h2 {
+    margin-bottom: 20px;
+    color: #003366;
+    font-size: 24px;
+}
+
+
+.logo-slider {
+    overflow: hidden;
+    width: 100%;
+    background: #f2f5f9;
+    padding: 20px 0;
+}
+
+.logos {
+    display: flex;
+    gap: 40px;
+    animation: slide 18s linear infinite;
+}
+
+.logos img {
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* ANIMATION */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+/* NEWSLETTER SECTION */
+.newsletter {
+    text-align: center;
+    margin: 50px 0;
+    padding: 30px;
+    background: #f2f5f9;
+    border-radius: 10px;
+}
+
+.newsletter h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.newsletter-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter-box input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.newsletter-box button {
+    padding: 10px 20px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter-box button:hover {
+    background: #0050a0;
+}
+/* SERVICES SECTION */
+.services {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.service-card {
+    width: 30%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+/* FOOTER */
+.footer {
+    margin-top: 50px;
+    background: #003366;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    background: white;
+    color: #003366;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.footer-social img {
+    width: 28px;     
+    margin: 0 10px;  
+    cursor: pointer;
+    filter: brightness(10); 
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* SINGLE ACCOUNT DETAILS PAGE */
+.account-details-box {
+    background: #f8f9fc;
+    margin: 30px auto;
+    padding: 30px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.account-details-box h2 {
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.account-info p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.account-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.account-actions button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #003366;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.account-actions button:hover {
+    background: #0050a0;
+}
+
+/* TRANSACTION TABLE SECTION */
+.transaction-section {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.transaction-section h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.transaction-table tr:nth-child(even) {
+    background: #f2f5f9;
+}
+
+.transaction-table tr:hover {
+    background: #e2e8f0;
+}
+
+/* BADGES */
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge.success {
+    background: #c8f7c5;
+    color: #2d7a2d;
+}
+
+.badge.failed {
+    background: #f8d7da;
+    color: #a94442;
+}
+
+.icon-img {
+    width: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+
+
